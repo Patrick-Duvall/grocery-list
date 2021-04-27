@@ -1,5 +1,6 @@
 import { render } from '@testing-library/react'
 import React, { Component } from 'react'
+import './GroceryForm.css'
 
 class GroceryForm extends Component {
   constructor() {
@@ -32,6 +33,7 @@ class GroceryForm extends Component {
   render() {
     return(
       <form className='grocery-form'>
+        <label htmlFor='notes'>Name</label>
         <input
           type='text'
           placeholder='name'
@@ -40,6 +42,7 @@ class GroceryForm extends Component {
           onChange={e => this.handleChange(e)}
         />
 
+        <label htmlFor='notes'>Quantity</label>
         <input
           type='text'
           placeholder='quantity'
@@ -48,6 +51,7 @@ class GroceryForm extends Component {
           onChange={ e => this.handleChange(e)}
         />
 
+        <label htmlFor='notes'>Notes</label>
         <input
           type='text'
           placeholder='notes'

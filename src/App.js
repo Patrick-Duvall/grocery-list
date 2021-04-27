@@ -28,11 +28,21 @@ class App extends Component {
   }
 
   onPurchase = (id) => {
-    console.log('hurray');
+    let groceries = this.state.groceries
+    let grocery = this.state.groceries.find(grocery => grocery.id === id)
+    let index = this.state.groceries.findIndex(grocery => grocery.id === id)
+    grocery['purchased'] = grocery['purchased'] ? false : true
+    groceries[index] = grocery
+    this.setState({groceries})
   }
 
   onStar = (id) => {
-
+    let groceries = this.state.groceries
+    let grocery = this.state.groceries.find(grocery => grocery.id === id)
+    let index = this.state.groceries.findIndex(grocery => grocery.id === id)
+    grocery['starred'] = grocery['starred'] ? false : true
+    groceries[index] = grocery
+    this.setState({groceries})
   }
 
   onDelete = (id) => {
@@ -42,7 +52,7 @@ class App extends Component {
 
   render () {
     return (
-      <div >
+      <div className='App'>
         <h1> Grocery List</h1>
         <GroceryForm addGrocery ={this.addGrocery} />
         { this.groceryList() }

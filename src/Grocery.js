@@ -14,7 +14,7 @@ const Grocery = ({ name, quantity, purchased, starred, onPurchase, onStar, onDel
         {starred ? 'Unstar' : 'Star'}
       </button>
       <button className='Grocery-delete' onClick={() => onDelete(id)}>
-        Delete
+        Remove
       </button>
     </article>
   )

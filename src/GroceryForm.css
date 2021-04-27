@@ -1,3 +1,25 @@
 .grocery-form {
-  border: 1px sollid darkblue;
+  border: 1px solid darkblue;
+  margin: auto;
+}
+
+.grocery-form input {
+  width: 80%;
+  margin: 0 auto 20px;
+  display: block;
+  background-color: rgb(160, 201, 236);
+}
+
+.grocery-form button {
+  width: 82%;
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: rgb(116, 162, 202);
+}
+
+.grocery-form label {
+  padding-left: 45px;
+  display: block;
+  font-size: small;
 }
