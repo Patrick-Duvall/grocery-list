@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Grocery from './Grocery'
+import GroceryForm from './GroceryForm'
 import './App.css';
 
 class App extends Component {
@@ -23,6 +24,7 @@ class App extends Component {
   render () {
     return (
       <div>
+        <h1> Grocery List</h1>
         <GroceryForm addGrocery ={this.addGrocery} />
         { this.groceryList() }
       </div>
