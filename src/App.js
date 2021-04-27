@@ -18,12 +18,31 @@ class App extends Component {
   };
 
   groceryList = () => {
-    this.state.groceries.map(grocery => <Grocery {...grocery} />)
+    return this.state.groceries.map(grocery => {
+     return <Grocery
+     onPurchase={this.onPurchase}
+     onStar={this.onStar}
+     onDelete={this.onDelete}
+     {...grocery} />}
+    )
+  }
+
+  onPurchase = (id) => {
+    console.log('hurray');
+  }
+
+  onStar = (id) => {
+
+  }
+
+  onDelete = (id) => {
+    let filteredGroceries = this.state.groceries.filter(grocery => grocery.id != id)
+    this.setState({groceries: filteredGroceries})
   }
 
   render () {
     return (
-      <div>
+      <div >
         <h1> Grocery List</h1>
         <GroceryForm addGrocery ={this.addGrocery} />
         { this.groceryList() }

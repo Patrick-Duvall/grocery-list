@@ -23,7 +23,6 @@ describe('App', () => {
     wrapper.instance().addGrocery(mockGrocery)
     wrapper.instance().addGrocery(mockGrocery2)
 
-    console.log(wrapper.instance().state.groceries);
-    console.log(wrapper.instance().groceryList());
+    expect(wrapper.instance().groceryList().length).toEqual(2);
   })
 })

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './Grocery.css'
 
 const Grocery = ({ name, quantity, purchased, starred, onPurchase, onStar, onDelete, id}) => {
 

@@ -18,7 +18,7 @@ class GroceryForm extends Component {
   submitGrocery = e => {
     e.preventDefault()
     const newGrocery = {
-      id: Date.now,
+      id: Date.now(),
       ...this.state
     }
     this.props.addGrocery(newGrocery)
@@ -56,7 +56,7 @@ class GroceryForm extends Component {
           onChange={ e => this.handleChange(e)}
         />
 
-        <button onClick={ e => this.submitGrocery(e)}>Create Item</button>
+        <button className='Grocery-submit' onClick={ e => this.submitGrocery(e)}>Create Item</button>
       </form>
     ) 
   }
