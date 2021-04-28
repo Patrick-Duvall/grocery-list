@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import Grocery from './Grocery'
 import GroceryForm from './GroceryForm'
+import ClearButton from './ClearButton'
 import './App.css';
 
 class App extends Component {
@@ -50,11 +51,17 @@ class App extends Component {
     this.setState({groceries: filteredGroceries})
   }
 
+  clearGroceries = () => {
+    this.setState({groceries: []})
+  }
+
   render () {
     return (
       <div className='App'>
         <h1> Grocery List</h1>
+        <h2 className='grocery-count'>{this.state.groceries.length} items on grocery list</h2>
         <GroceryForm addGrocery ={this.addGrocery} />
+        <ClearButton groceries={this.state.groceries} clearGroceries={this.clearGroceries} />
         { this.groceryList() }
       </div>
     );

@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import './Grocery.css'
 
-const Grocery = ({ name, quantity, purchased, starred, onPurchase, onStar, onDelete, id}) => {
+const Grocery = ({ name, quantity, notes, purchased, starred, onPurchase, onStar, onDelete, id}) => {
 
   return ( 
     <article key={id} className={`Grocery ${starred && 'starred'} ${purchased && 'purchased'}`}>
       <h3>{name}</h3>
       <p>quantity: {quantity}</p>
+      <p>{notes}</p>
       <button className='Grocery-purchase' onClick={() => onPurchase(id)}>
         {purchased ? 'Unpurchase' : 'Purchase'}
       </button>

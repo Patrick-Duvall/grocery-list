@@ -20,7 +20,7 @@ describe('Grocery', () => {
     expect(wrapper).toMatchSnapshot();
   })
 
-  it('should nave a classname of tarred if starred', () => {
+  it('should nave a classname of starred if starred', () => {
     const wrapper = shallow(
       <Grocery name='Bananas' starred={true} />
     )

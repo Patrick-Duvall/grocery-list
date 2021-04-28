@@ -33,7 +33,7 @@ class GroceryForm extends Component {
   render() {
     return(
       <form className='grocery-form'>
-        <label htmlFor='notes'>Name</label>
+        <label htmlFor='name'>Name</label>
         <input
           type='text'
           placeholder='name'
@@ -42,7 +42,7 @@ class GroceryForm extends Component {
           onChange={e => this.handleChange(e)}
         />
 
-        <label htmlFor='notes'>Quantity</label>
+        <label htmlFor='quantity'>Quantity</label>
         <input
           type='text'
           placeholder='quantity'
